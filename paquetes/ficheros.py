@@ -49,3 +49,12 @@ def gordos(path,size,type):
 				sizef=os.path.getsize(file)/1024/1024/1024
 				print "fichero " + str(file) + " // " + str(sizef) + "G"
 
+#Funcion que muestre el contenido de un fichero	
+
+def visualizar(fichero):
+	file=open(fichero,'r')
+	file1=file.read()
+	#file2=file.readlines()
+	#print file2
+	print file1
+	file.close()
