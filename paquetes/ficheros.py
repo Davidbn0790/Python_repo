@@ -58,3 +58,21 @@ def visualizar(fichero):
 	#print file2
 	print file1
 	file.close()
+
+#Funcion llamada cp que admita dos parametros, coja un fichero con nombre del primer parametro, y copie el contenido en otro fichero llamado como el segundo parametro
+
+def cp(old,new):
+	if not os.access(old,os.R_OK):
+		return "El fichero a copiar no existe"
+	if os.access(new,os.R_OK):
+		return "El fichero nuevo ya existe"
+
+	file_old=open(old,'r')
+	file_old1=file_old.read()
+	file_new=open(new,'w')
+	file_new.write(file_old1)
+	file_old.close()
+	file_new.close()
+	return "Fichero copiado"
+
+		
